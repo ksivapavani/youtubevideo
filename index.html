@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    *
+    {
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        width: 100vw;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+     #vid1
+    {
+        box-shadow: 2px 2px 5px black;
+        border-radius: 10px;
+        width:350px;
+        transition: transform 0.5s;
+    }
+    #vid1:hover
+    {
+        transform:scale(1.2);
+    }
+</style>
+</head>
+<body>
+ <video id="vid1" poster="./googlemap.jpeg" autoplay muted loop onmouseover="ply()" onmouseout="stp()"></video>   
+ <script>
+    function ply()
+    {
+        document.getElementById("vid1").setAttribute("src","./Satellites.mp4")
+    }
+    function stp()
+    {
+        document.getElementById("vid1").setAttribute("src","false") 
+    }
+ </script>
+</body>
+</html>
